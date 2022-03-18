@@ -12,22 +12,18 @@ const app = new Vue({
             {
                 text: "comprare le pere",
                 done: false,
-                checked: false
             },
             {
                 text: "comprare le mele",
                 done: false,
-                checked: false
             },
             {
                 text: "comprare le banane",
                 done: false,
-                checked: false
             },
             {
                 text: "comprare le noci",
                 done: true,
-                checked: true
             },
         ]
 
