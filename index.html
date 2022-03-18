@@ -44,24 +44,36 @@
                 <div class="col 12 d-flex justify-content-center">
                     <div class="wrapper text-center rounded shadow position-relative p-5 mt-5">
                         <div class="list-wrapper rounded">
-                            <h1 class="mt-5 mb-3 fw-bolder">To Do List</h1>
+                            
+                                <h1 class="mt-5 mb-3 fw-bolder">To Do List</h1>
+                            <div id="actual-list" class="mb-4">
+                                <ul class="text-start" id="to-do-list">
+                                    <li class="d-flex justify-content-between" v-for="(item, index) in list">
+                                        <div>
+                                            <input v-if="(!item.done)" class="form-check-input me-3" type="checkbox"
+                                                value="" id="flexCheckDefault" @click="addRemoveDone(index)"> <input
+                                                v-else class="form-check-input me-3" type="checkbox" value=""
+                                                @click="addRemoveDone(index)" id="flexCheckDefault" checked>
 
-                            <ul class="text-start" id="to-do-list">
-                                <li class="d-flex justify-content-between" v-for="item in list">
-                                    <div>
-                                        <input v-if="(!item.done)" class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault"> <input v-else class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault" checked>
-                                        
-                                        <span :class="(item.done) ? 'text-decoration-line-through' : ''" id="list-content">{{item.text}}</span> 
-                                    </div>
-                                    <span id="cross">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </span>
-                                </li>        
-                            </ul>
+                                            <span :class="(item.done) ? 'text-decoration-line-through' : ''"
+                                                id="list-content" @click="addRemoveDone(index)">{{item.text}}</span>
+                                        </div>
+                                        <span id="cross" @click="deleteItem(index)">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="new-item" class="text-center px-3">
+                                <input type="text" v-model="text" class="form-control fs-5 mb-3" :placeholder="(text == '') ? 'add new task' : ''" @keyup.enter="addTask(text)">
+                                <button class="btn btn-primary" @click="addTask(text)">Add Task</button>
+                            </div>
                         </div>
-                        
+
+
 
                     </div>
+
                 </div>
             </div>
         </div>
