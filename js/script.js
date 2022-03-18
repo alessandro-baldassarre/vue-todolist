@@ -26,8 +26,6 @@ const app = new Vue({
                 done: true,
             },
         ]
-
-      
       
     },
 
