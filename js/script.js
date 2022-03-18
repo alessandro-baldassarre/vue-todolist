@@ -48,12 +48,13 @@ const app = new Vue({
         },
 
         addTask: function(task){
-            newTask = {};
-            newTask.text = task;
-            newTask.done = false;
-            this.list.push(newTask);
-            this.text = "";
-            
+            if(task != ""){
+                newTask = {};
+                newTask.text = task;
+                newTask.done = false;
+                this.list.push(newTask);
+                this.text = "";
+            }
         }
        
     }
