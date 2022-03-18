@@ -47,9 +47,11 @@
                             <h1 class="mt-5 mb-3 fw-bolder">To Do List</h1>
 
                             <ul class="text-start" id="to-do-list">
-                                <li class="d-flex justify-content-between">
+                                <li class="d-flex justify-content-between" v-for="item in list">
                                     <div>
-                                        <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault"><span id="list-content">pera</span> 
+                                        <input v-if="(!item.done)" class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault"> <input v-else class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault" checked>
+                                        
+                                        <span :class="(item.done) ? 'text-decoration-line-through' : ''" id="list-content">{{item.text}}</span> 
                                     </div>
                                     <span id="cross">
                                         <i class="fa-solid fa-xmark"></i>

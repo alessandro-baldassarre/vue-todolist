@@ -1,6 +1,7 @@
 
 body{
-    font-family: "Montserrat", sans-serif;
+    
+    font-family: 'Dancing Script', cursive;
 }
 
 main{
@@ -44,8 +45,7 @@ ul#to-do-list li{
 }
 
 ul#to-do-list li span#list-content{
-    font-family: 'Dancing Script', cursive;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 ul#to-do-list li input{
@@ -53,7 +53,7 @@ ul#to-do-list li input{
 }
 
 ul#to-do-list li span#cross{
-    padding-top: 1.5rem;
+    padding-top: 0.8rem;
     cursor: pointer;
 }
 
