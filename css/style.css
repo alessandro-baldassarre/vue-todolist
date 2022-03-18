@@ -2,3 +2,60 @@
 body{
     font-family: "Montserrat", sans-serif;
 }
+
+main{
+    max-width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+img#card-spring{
+    z-index: 2;
+}
+
+div.wrapper{
+    width: 600px;
+    height: 650px;
+    bottom: 175px;
+    background-color: black;
+    
+}
+
+div.list-wrapper{
+    border: 3px solid lightgray;
+    height: 100%;
+    overflow-y: auto;
+    background-color: white;
+}
+
+div.list-wrapper h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+}
+
+ul#to-do-list{
+    list-style-type: none;
+    padding: .6rem;
+}
+
+ul#to-do-list li{
+    padding: .2rem;
+    border-bottom: 1px solid black;
+}
+
+ul#to-do-list li span#list-content{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+
+ul#to-do-list li input{
+    vertical-align: text-bottom;
+}
+
+ul#to-do-list li span#cross{
+    padding-top: 1.5rem;
+    cursor: pointer;
+}
+
+
+
