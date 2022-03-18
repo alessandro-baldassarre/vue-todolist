@@ -11,19 +11,23 @@ const app = new Vue({
         list: [
             {
                 text: "comprare le pere",
-                done: false
+                done: false,
+                checked: false
             },
             {
                 text: "comprare le mele",
-                done: false
+                done: false,
+                checked: false
             },
             {
                 text: "comprare le banane",
-                done: false
+                done: false,
+                checked: false
             },
             {
                 text: "comprare le noci",
-                done: true
+                done: true,
+                checked: true
             },
         ]
 
@@ -39,6 +43,8 @@ const app = new Vue({
 
         addRemoveDone: function(index){
             this.list[index].done = !(this.list[index].done);
+            this.list[index].checked = !(this.list[index].checked);
+            console.log(this.list[index].done)
         },
 
         addTask: function(task){

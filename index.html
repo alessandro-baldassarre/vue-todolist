@@ -50,10 +50,8 @@
                                 <ul class="text-start" id="to-do-list">
                                     <li class="d-flex justify-content-between" v-for="(item, index) in list">
                                         <div>
-                                            <input v-if="(!item.done)" class="form-check-input me-3" type="checkbox"
-                                                value="" id="flexCheckDefault" @click="addRemoveDone(index)"> <input
-                                                v-else class="form-check-input me-3" type="checkbox" value=""
-                                                @click="addRemoveDone(index)" id="flexCheckDefault" checked>
+                                            <input class="form-check-input me-3" type="checkbox"
+                                                value="" id="flexCheckDefault" @click="addRemoveDone(index)" v-model="item.checked"> 
 
                                             <span :class="(item.done) ? 'text-decoration-line-through' : ''"
                                                 id="list-content" @click="addRemoveDone(index)">{{item.text}}</span>
